@@ -1,1 +1,521 @@
+/* ===========================
+   VARIABLES
+=========================== */
 
+:root{
+    --azul:#020b1d;
+    --azul2:#06142f;
+    --azul3:#081d44;
+    --dorado:#d4a95f;
+    --dorado-claro:#f2d28b;
+    --blanco:#ffffff;
+    --gris:#b8b8b8;
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:linear-gradient(180deg,var(--azul),#000814);
+    color:white;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    background:rgba(2,11,29,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(212,169,95,.2);
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:999;
+}
+
+.logo img{
+    width:75px;
+}
+
+nav ul{
+    display:flex;
+    gap:45px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    font-weight:500;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--dorado);
+}
+
+.header-buttons{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.header-buttons a{
+    color:var(--dorado);
+    border:1px solid rgba(212,169,95,.5);
+    padding:12px 22px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.header-buttons a:hover{
+    background:var(--dorado);
+    color:black;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    padding:150px 7% 80px;
+    gap:40px;
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-logo{
+    width:180px;
+    margin-bottom:30px;
+}
+
+.subtitle{
+    color:var(--dorado);
+    letter-spacing:4px;
+    font-size:.9rem;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:5rem;
+    line-height:1;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:var(--dorado);
+    font-style:italic;
+}
+
+.hero p{
+    color:#d8d8d8;
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+/* ===========================
+   BOTONES HERO
+=========================== */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-gold{
+    background:linear-gradient(
+        45deg,
+        #b88639,
+        #f2d28b
+    );
+    color:black;
+    padding:18px 40px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.btn-outline{
+    border:1px solid var(--dorado);
+    color:var(--dorado);
+    padding:18px 40px;
+    border-radius:12px;
+}
+
+.btn-outline:hover{
+    background:var(--dorado);
+    color:black;
+}
+
+/* ===========================
+   HERO IMAGEN
+=========================== */
+
+.hero-image{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border:3px solid rgba(212,169,95,.5);
+    border-radius:50%;
+}
+
+.hero-image img{
+    width:90%;
+    z-index:2;
+}
+
+.delivery-badge{
+    position:absolute;
+    right:20px;
+    top:100px;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:#06142f;
+    border:2px solid var(--dorado);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    box-shadow:0 0 40px rgba(212,169,95,.4);
+    z-index:5;
+}
+
+.delivery-badge i{
+    font-size:2rem;
+    color:var(--dorado);
+    margin-bottom:15px;
+}
+
+.delivery-badge h3{
+    color:var(--dorado);
+    margin-bottom:10px;
+}
+
+/* ===========================
+   BENEFICIOS
+=========================== */
+
+.benefits{
+    width:85%;
+    margin:auto;
+    margin-top:-40px;
+    background:#07142f;
+    border:1px solid rgba(212,169,95,.3);
+    border-radius:30px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:40px;
+}
+
+.benefit{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.benefit i{
+    font-size:2rem;
+    color:var(--dorado);
+}
+
+.benefit h3{
+    color:var(--dorado);
+    margin-bottom:10px;
+}
+
+/* ===========================
+   DESTACADOS
+=========================== */
+
+.featured{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.featured span{
+    color:var(--dorado);
+    letter-spacing:4px;
+}
+
+.featured h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-top:20px;
+}
+
+/* ===========================
+   CATEGORIAS
+=========================== */
+
+.categories{
+    padding:100px 7%;
+}
+
+.categories h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2.5rem;
+    color:var(--dorado);
+}
+
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:30px;
+}
+
+.category-card{
+    background:#06142f;
+    border:1px solid rgba(212,169,95,.25);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--dorado);
+}
+
+.category-card img{
+    width:80px;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   PRODUCTOS
+=========================== */
+
+.products{
+    padding:100px 7%;
+}
+
+.products h2{
+    text-align:center;
+    color:var(--dorado);
+    margin-bottom:60px;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.product-card{
+    background:#07142f;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    border:1px solid rgba(212,169,95,.2);
+    transition:.4s;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    height:280px;
+    object-fit:contain;
+    margin:auto;
+}
+
+.product-card h3{
+    margin:25px 0;
+}
+
+.product-card p{
+    color:var(--dorado);
+    font-size:1.3rem;
+    margin-bottom:25px;
+}
+
+.product-card button{
+    background:linear-gradient(
+        45deg,
+        #b88639,
+        #f2d28b
+    );
+    border:none;
+    padding:15px 35px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ===========================
+   PASOS
+=========================== */
+
+.steps{
+    padding:120px 7%;
+    text-align:center;
+}
+
+.steps-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.step{
+    background:#06142f;
+    padding:50px;
+    border-radius:20px;
+}
+
+.step span{
+    width:70px;
+    height:70px;
+    background:var(--dorado);
+    color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:25px;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    padding:70px 20px;
+    background:#000814;
+    text-align:center;
+    border-top:1px solid rgba(212,169,95,.2);
+}
+
+footer img{
+    width:120px;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+footer p{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.socials a{
+    width:50px;
+    height:50px;
+    border:1px solid var(--dorado);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--dorado);
+}
+
+.socials a:hover{
+    background:var(--dorado);
+    color:black;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-logo{
+        margin:auto;
+        margin-bottom:30px;
+    }
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+    .benefits,
+    .categories-grid,
+    .products-grid,
+    .steps-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .delivery-badge{
+        display:none;
+    }
+}
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .featured h2{
+        font-size:2rem;
+    }
+
+    .logo img{
+        width:60px;
+    }
+}
