@@ -197,6 +197,9 @@ nav a:hover{
 =========================== */
 
 .hero-image{
+    width:100%;
+    max-width:850px;
+    transform:scale(1.25);
     position:relative;
     display:flex;
     justify-content:center;
