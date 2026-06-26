@@ -114,14 +114,14 @@ nav a:hover{
 .hero{
     background:
         linear-gradient(
-            to right,
-            rgba(2,11,29,.95),
-            rgba(2,11,29,.70)
+            rgba(2,11,29,.88),
+            rgba(2,11,29,.65)
         ),
         url("../img/fondo-noche.jpg");
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-text{
