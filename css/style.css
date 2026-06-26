@@ -117,7 +117,7 @@ nav a:hover{
             rgba(2,11,29,.88),
             rgba(2,11,29,.65)
         ),
-        url("../img/fondo-noche.jpg");
+        url("../img/fondo-noche.png");
 
     background-size: cover;
     background-position: center;
